@@ -2,15 +2,24 @@ package patreon
 
 type(
 	Pledge struct {
-
+		Data Data
+		Included []map[string]interface{}
 	}
 
-	Included struct {
-		Id string
-		Relationships Relationships
+	Data struct {
+		Attributes DataAttributes
 	}
 
-	Relationships struct {
+	DataAttributes struct {
+		Amount int `json:"pledge_amount_cents"`
+	}
 
+	User struct {
+		Attributes UserAttributes
+	}
+
+	UserAttributes struct {
+		DiscordId string `json:"discord_id"`
+		Email string
 	}
 )

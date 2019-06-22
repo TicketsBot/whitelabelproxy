@@ -1,0 +1,15 @@
+[server]
+host="0.0.0.0:8844"
+
+[patreon]
+secret=""
+
+[database]
+host="127.0.0.1"
+port=3306
+username=""
+password=""
+database="patreon"
+  [database.pool]
+  maxconnections=5
+  maxidle=5

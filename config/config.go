@@ -8,10 +8,30 @@ import (
 type(
 	Config struct {
 		Server Server
+		Patreon Patreon
+		Database Database
 	}
 
 	Server struct {
 		Host string
+	}
+
+	Patreon struct {
+		Secret string
+	}
+
+	Database struct {
+		Host string
+		Port int
+		Username string
+		Password string
+		Database string
+		Pool Pool
+	}
+
+	Pool struct {
+		MaxConnections int
+		MaxIdle int
 	}
 )
 
